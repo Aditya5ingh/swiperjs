@@ -32,31 +32,19 @@ export default function Home() {
     const elemClicked = e.target.parentElement;
     for (let i = 0; i < 4; i++) {
       if (document.getElementsByClassName("slides")[i] !== elemClicked)
-        document.getElementsByClassName("slides")[i].classList.remove("active");
+        document
+          .getElementsByClassName("slides")
+          [i].classList.add("swiper-slide-prev");
     }
     elemClicked.classList.add("active");
   }
   return (
-    <div className="slider-section w-screen h-screen">
-      <div className="container w-full h-1/2 p-4">
+    <div className="slider-section w-screen h-screen flex justify-center align-middle">
+      <div className="container w-1/2 h-96 p-4">
         <Swiper
           loop={true}
-          slidesPerView={9}
-          spaceBetween={5}
-          // on={{
-          //   slideChangeTransitionStart: function () {
-          //     console.log(swiper.activeIndex);
-          //     const slides = document.querySelectorAll(".swiper-slide");
-          //     slides.forEach((slide) => slide.classList.remove("active"));
-
-          //     let activeIndex = swiper.activeIndex; // Active index in the Swiper instance
-          //     const leftSlideIndex =
-          //       (activeIndex + slides.length + 5) % slides.length;
-          //     slides[leftSlideIndex].classList.add("active");
-          //   },
-          // }}
-          // centeredSlides={true}
-
+          slidesPerView={5}
+          spaceBetween={30}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -65,112 +53,70 @@ export default function Home() {
           className="mySwiper"
         >
           <SwiperSlide>
-            <div className="right">Slide 1</div>
+            <div className="right">
+              <Image
+                src="/wwd-s.png"
+                width="400"
+                height="500"
+                alt="asd"
+                className="slideImg object-cover"
+              ></Image>
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="right">Slide 2</div>
+            <div className="right">
+              <Image
+                src="/wwd-s.png"
+                width="400"
+                height="500"
+                alt="asd"
+                className="slideImg object-cover"
+              ></Image>
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="right">Slide 3</div>
+            <div className="right">
+              <Image
+                src="/wwd-s.png"
+                width="400"
+                height="500"
+                alt="asd"
+                className="slideImg object-cover"
+              ></Image>
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="right">Slide 7</div>
+            <div className="right">
+              <Image
+                src="/wwd-s.png"
+                width="400"
+                height="500"
+                alt="asd"
+                className="slideImg object-cover"
+              ></Image>
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="right">Slide 8</div>
+            <div className="right">
+              <Image
+                src="/wwd-s.png"
+                width="400"
+                height="500"
+                alt="asd"
+                className="slideImg object-cover"
+              ></Image>
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="right">Slide 9</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 4</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 5</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 6</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 7</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 8</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 9</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 1</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 2</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 3</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 7</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 8</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 9</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 4</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 5</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 6</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 7</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 8</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 9</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 1</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 2</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 3</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 7</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 8</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 9</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 4</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 5</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 6</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 7</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 8</div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="right">Slide 9</div>
+            <div className="right">
+              <Image
+                src="/wwd-s.png"
+                width="400"
+                height="500"
+                alt="asd"
+                className="slideImg object-cover"
+              ></Image>
+            </div>
           </SwiperSlide>
         </Swiper>
         {/* <div className="slider-area flex flex-nowrap w-4/5 h-2/3 gap-4">
@@ -179,7 +125,7 @@ export default function Home() {
             onClick={handleClick}
           >
             <Image
-              src="https://picsum.photos/seed/picsum/200/300"
+              src="/wwd-s.png"
               width="400"
               height="500"
               alt="asd"

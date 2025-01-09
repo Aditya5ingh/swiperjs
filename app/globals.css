@@ -1,43 +1,83 @@
+/* Tailwind CSS directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Global Styles */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.active {
-  width: 50%;
-}
 img {
   height: 100%;
   width: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 .active img {
   width: 100%;
+  height: 100%;
 }
+
+/* Swiper Container Styles */
 .swiper {
   width: 100%;
   height: 100%;
 }
+
 .swiper-wrapper {
   display: flex;
   width: 100%;
   margin-left: 0;
 }
 
+/* Swiper Slide Styles */
 .swiper-slide {
   background-color: #2ecc71;
-  width: 17%;
+  width: 20%; /* Initial width */
   height: 100%;
+  transition: all 2s ease-out; /* Smooth width transition */
+  border-radius: 20px;
+  border: 5px solid black;
+  overflow: hidden;
 }
-.swiper-slide-active {
-  background-color: #3498db;
-  width: 70%;
+.right {
   height: 100%;
+  width: 100%;
+}
 
-  flex: 0 0 70%;
+/* Active Slide Styles */
+.swiper-slide.swiper-slide-active {
+  background-color: #3498db;
+  width: 40%; /* Expanded width for active slide */
+  height: 100%;
+  flex: 0 0 40%; /* Flex property ensures it remains 40% */
+}
+
+/* Previous Slide Styles */
+.swiper-slide.swiper-slide-prev {
+  background-color: #3498db;
+  width: 20%; /* Shrunk width for previous slide */
+  height: 100%;
+  flex: 0 0 20%; /* Flex property ensures it remains 20% */
+}
+
+/* Keyframe Animations for Width Changes */
+@keyframes openup {
+  from {
+    width: 20%;
+  }
+  to {
+    width: 40%;
+  }
+}
+
+@keyframes closeup {
+  from {
+    width: 40%;
+  }
+  to {
+    width: 20%;
+  }
 }
