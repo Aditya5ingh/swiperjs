@@ -37,10 +37,11 @@ img {
   background-color: #2ecc71;
   width: 20%; /* Initial width */
   height: 100%;
-  transition: all 2s ease-out; /* Smooth width transition */
+  transition: width 5s ease-out; /* Smooth width transition */
   border-radius: 20px;
   border: 5px solid black;
   overflow: hidden;
+  margin-right: 5px;
 }
 .right {
   height: 100%;
@@ -52,6 +53,7 @@ img {
   background-color: #3498db;
   width: 40%; /* Expanded width for active slide */
   height: 100%;
+  margin-left: 0;
   flex: 0 0 40%; /* Flex property ensures it remains 40% */
 }
 
@@ -60,7 +62,6 @@ img {
   background-color: #3498db;
   width: 20%; /* Shrunk width for previous slide */
   height: 100%;
-  flex: 0 0 20%; /* Flex property ensures it remains 20% */
 }
 
 /* Keyframe Animations for Width Changes */

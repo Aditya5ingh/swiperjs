@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 // import Swiper from "swiper/bundle";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 // import styles bundle
 import "swiper/css/bundle";
 export default function Home() {
@@ -43,15 +43,38 @@ export default function Home() {
       <div className="container w-1/2 h-96 p-4">
         <Swiper
           loop={true}
-          slidesPerView={5}
-          spaceBetween={30}
+          navigation={true}
+          slidesPerView={7}
+          spaceBetween={15}
           autoplay={{
             delay: 2500,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
           }}
-          modules={[Autoplay]}
+          modules={[Autoplay, Navigation]}
           className="mySwiper"
         >
+          <SwiperSlide>
+            <div className="right">
+              <Image
+                src="/wwd-s.png"
+                width="400"
+                height="500"
+                alt="asd"
+                className="slideImg object-cover"
+              ></Image>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="right">
+              <Image
+                src="/wwd-s.png"
+                width="400"
+                height="500"
+                alt="asd"
+                className="slideImg object-cover"
+              ></Image>
+            </div>
+          </SwiperSlide>
           <SwiperSlide>
             <div className="right">
               <Image
